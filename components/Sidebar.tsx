@@ -18,21 +18,10 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
   return (
     <aside className="sidebar">
       <Link href="/">
-        <Image
-          src="/assets/icons/logo-full-brand.svg"
-          alt="logo"
-          width={160}
-          height={50}
-          className="hidden h-auto lg:block"
-        />
-
-        <Image
-          src="/assets/icons/logo-brand.svg"
-          alt="logo"
-          width={52}
-          height={52}
-          className="lg:hidden"
-        />
+        <h1 className="text-6xl font-bold font-poppins text-indigo-700 capitalize">
+          Store_
+          <span className="text-4xl text-indigo-500 capitalize">Files</span>
+        </h1>
       </Link>
 
       <nav className="sidebar-nav">
@@ -42,7 +31,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
               <li
                 className={cn(
                   "sidebar-nav-item",
-                  pathname === url && "shad-active",
+                  pathname === url && "shad-active"
                 )}
               >
                 <Image
@@ -52,7 +41,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
                   height={24}
                   className={cn(
                     "nav-icon",
-                    pathname === url && "nav-icon-active",
+                    pathname === url && "nav-icon-active"
                   )}
                 />
                 <p className="hidden lg:block">{name}</p>
@@ -61,14 +50,6 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
           ))}
         </ul>
       </nav>
-
-      <Image
-        src="/assets/images/files-2.png"
-        alt="logo"
-        width={506}
-        height={418}
-        className="w-full"
-      />
 
       <div className="sidebar-user-info">
         <Image
